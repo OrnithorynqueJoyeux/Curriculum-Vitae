@@ -1,0 +1,253 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "Raleway", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+:root {
+    --accent-color: #17abb3;
+    --text-color: #333333;
+    --gray1-color: #e3e3e3;
+    --gray2-color: #f5f5f5;
+    --white-color: #ffffff;
+}
+
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--gray2-color);
+}
+
+header, footer {
+    background-color:var(--accent-color);
+    width: 1160px;
+    margin: auto;
+    /* flex: 1; */
+}
+
+div.content {
+    display: flex;
+    width: 1160px;
+    margin: auto;
+}
+
+aside {
+    flex: 1;
+    background-color: var(--gray1-color);
+}
+
+main {
+    flex: 3;
+    background-color: var(--white-color);
+}
+
+h1, h2, h3 {
+    font-family: "Lato", sans-serif;
+}
+
+h1,h2 {
+    font-weight: 600;
+}
+
+
+/* HEADER */
+
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 50px;
+}
+
+header > a {
+    display: flex;
+    flex: 1;
+    width: 200px;
+}
+
+header > a > img {
+    border-radius: 50%;
+    border: 5px solid var(--white-color);
+    max-width: 75%;
+    margin: auto;
+}
+
+header > a > img:hover {
+    cursor: zoom-in;
+}
+
+header > section {
+    flex: 3;
+}
+
+header > section > h1,
+header > section > h2 {
+    text-align: center;
+}
+
+header > section > h1 {
+    font-size: 2.75rem;
+}
+
+header > section > h2 {
+    font-size: 1.75rem;
+}
+
+header > section > ul {
+    display: grid;
+    grid-template: 25px 25px / 100px 100px;
+    column-gap: 50px;
+    row-gap: 15px;
+    margin: auto;
+    width: 200px;
+    padding: 15px 0;
+}
+
+header a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+header li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+}
+
+header li > img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+/* ASIDE & MAIN */
+
+aside, main {
+    padding: 50px;
+}
+
+h3 {
+    color: var(--accent-color);
+    padding: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+aside > section > ul > li {
+    padding: 5px 0;
+}
+
+aside > section:nth-child(1) > ul > li,
+aside > section:nth-child(2) > ul > li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+/* aside > section:nth-child(1) > ul > li span,
+aside > section:nth-child(2) > ul > li span {
+    font-weight: bold;
+} */
+
+aside > section:nth-child(3) > ul > li,
+aside > section:nth-child(4) > ul > li {
+    list-style: square;
+    transform: translateX(15px);
+}
+
+aside > section:nth-child(3) > ul > li::marker,
+aside > section:nth-child(4) > ul > li::marker {
+    color: var(--accent-color);
+    font-size: 1.3em;
+}
+
+aside > section:nth-child(1) > ul > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+aside > section:nth-child(1) > ul > li > div {
+    display: flex;
+    flex-direction: row;
+    padding-right: 100px;
+}
+
+aside strong,
+main strong {
+    font-weight: 600;
+}
+
+main strong,
+main em {
+    display: block;
+}
+
+main > section > div {
+    padding: 10px 0;
+}
+
+main article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 15px 0;
+}
+
+main article:hover {
+    background-color: var(--gray1-color);
+    border-left: 5px solid var(--accent-color);
+    padding: 15px 10px;
+}
+
+main span {
+    color: var(--accent-color);
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer > div > img {
+    width: 30px;
+    margin: 10px;
+}
+
+footer > div > img:hover {
+    opacity: 0.8;
+}
+
+footer > small {
+    color: var(--white-color);
+    font-style: italic;
+    padding-bottom: 10px;
+}
